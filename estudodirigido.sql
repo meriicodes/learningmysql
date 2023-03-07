@@ -23,7 +23,21 @@ Peso decimal(5,2),
 Nacionalidade VARCHAR(30),
 primary key (idestudante)
 ) 
+drop table Alunos;
+database ESTUDO DIRIGIDO; 
 
+CREATE SCHEMA IF NOT EXISTS ESTUDO;
+CREATE TABLE IF NOT EXISTS ESTUDO. estudante (/* criando a tabela alunos */
+idestudante int not null auto_increment, /*definindo o campo chave primaria */
+Nome VARCHAR(40) NOT NULL,
+Nascimento date,
+Sexo enum ('m', 'f'),
+Altura decimal (5,2),
+Peso decimal(5,2),
+Nacionalidade VARCHAR(30),
+Curso VARCHAR (20),
+primary key (idestudante)
+)
 CREATE TABLE IF NOT EXISTS ESTUDO.prof (/* criando a tabela alunos */
 idestudante int not null auto_increment, /*definindo o campo chave primaria */ 
 
