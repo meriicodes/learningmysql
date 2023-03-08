@@ -28,13 +28,13 @@ idprof int not null auto_increment, /*definindo o campo chave primaria */
 Nome VARCHAR(40) NOT NULL, /* nome do professor*/
 Nascimento date, /* data de nascimento professor*/
 Sexo enum ('m', 'f'), /* gênero do professor*/
-Altura decimal(5,2),
-Peso decimal(5,2), 
+Altura decimal(5,2), /*altura do professor*/
+Peso decimal(5,2), /*peso do professor*/
 Nacionalidade VARCHAR(30), /*nacionalidade do professor */
 primary key (idprof) /* chave primária serve como único identificador da tabela, são representadas por aqueles campos que não recebem valores repetidos*/
 );
   
-INSERT INTO `ESTUDO`.`prof` (`Nome`,`Nascimento`,`Sexo`,`Altura`,`Peso`,`Nacionalidade`)
+INSERT INTO `ESTUDO`.`prof` (`Nome`,`Nascimento`,`Sexo`,`Altura`,`Peso`,`Nacionalidade`) -- definindo ordem das informações
 VALUES ('Franciel','1965-07-20','m','1.75','100.0','Brasil');
 
 INSERT INTO `ESTUDO`.`prof` (`Nome`,`Nascimento`,`Sexo`,`Altura`,`Peso`,`Nacionalidade`)
@@ -62,9 +62,7 @@ INSERT INTO `ESTUDO`.`prof` (`Nome`,`Nascimento`,`Sexo`,`Altura`,`Peso`,`Naciona
 VALUES ('Marcell','1963-02-28','m','1.69','79.0','Brasil');
 
 INSERT INTO `ESTUDO`.`prof` (`Nome`,`Nascimento`,`Sexo`,`Altura`,`Peso`,`Nacionalidade`)
-VALUES ('lucas','1990-11-30','m','1.60','65.0','Brasil');
+VALUES ('Lucas','1990-11-30','m','1.60','65.0','Brasil');
 
-INSERT INTO `ESTUDO`.`prof` (`Nome`,`Nascimento`,`Sexo`,`Altura`,`Peso`,`Nacionalidade`)
-VALUES ('Gizeli','1985-05-09','f','1.85','72.0','Brasil');
 
 select * from ESTUDO.prof;
