@@ -104,7 +104,7 @@ SELECT * FROM `prova`.`CADASTRO`
 order by `nome` asc;
 
 SELECT * FROM `prova`.`CADASTRO`
-where year `nascimento` >= 1978;
+where year (`nascimento`) >= 1978;
 
 SELECT * FROM `prova`.`CADASTRO`
 where `nome` like %h%;
