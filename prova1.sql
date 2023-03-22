@@ -81,9 +81,30 @@ idalunos int not null auto_increment,
 -- minha reposta --
 use prova;
 INSERT INTO CADASTRO (`Nome`,`Nascimento`,`nacionalidade`,`sexo`,`contato`,`cpf`, `id`, `cidade`)
-VALUES ('Addie Larue','1985-07-09','Francesa','f','080028922','98765432101', '7654321', 'Paris');
+VALUES ('Addie Larue','1985-07-09','Francesa','f','080028922','9876', '76547861', 'Paris');
 
-select * from cadastro; 
+INSERT INTO CADASTRO (`Nome`,`Nascimento`,`nacionalidade`,`sexo`,`contato`,`cpf`, `id`, `cidade`)
+VALUES ('Harry Potter','1978-05-10','Ingles','m','087098923','1835', '98893491', 'Alfaneiros');
+
+INSERT INTO CADASTRO (`Nome`,`Nascimento`,`nacionalidade`,`sexo`,`contato`,`cpf`, `id`, `cidade`)
+VALUES ('Annabeth Chase','1998-09-09','Americana','f','087096922','3555', '79847491', 'Nova York');
+
+INSERT INTO CADASTRO (`Nome`,`Nascimento`,`nacionalidade`,`sexo`,`contato`,`cpf`, `id`, `cidade`)
+VALUES ('Eloisa Lopes','2006-11-06','Italiana','f','905496987','3479', '77868502', 'Roma');
+
+INSERT INTO CADASTRO (`Nome`,`Nascimento`,`nacionalidade`,`sexo`,`contato`,`cpf`, `id`, `cidade`)
+VALUES ('Carlos Gabriel','2006-01-05','Alemão','m','708096922','90976', '908474654', 'Berlim');
+
+select * from prova.CADASTRO; 
 
 -- 09. CONSTRUIR PELO MENOS TRÊS CONSULTAS UTILIZANDO OS  COMANDOS "ORDER BY", "WHERE" E "LIKE"
 -- minha resposta --
+
+SELECT * FROM `prova`.`CADASTRO`
+order by `nome` asc;
+
+SELECT * FROM `prova`.`CADASTRO`
+where year `nascimento` >= 1978;
+
+SELECT * FROM `prova`.`CADASTRO`
+where `nome` like %h%;
