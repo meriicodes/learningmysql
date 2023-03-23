@@ -2,9 +2,8 @@
 CREATE SCHEMA IF NOT EXISTS `ESTUDO_DIRIGIDO` DEFAULT CHARACTER SET utf8 ;
 USE `ESTUDO_DIRIGIDO` ;
 
--- -----------------------------------------------------
 -- Table `teste_banco`.`pessoas`
--- -----------------------------------------------------
+
 CREATE TABLE IF NOT EXISTS `ESTUDO_DIRIGIDO`.`pessoas` (
   `nome` VARCHAR(45) NULL,
   `idade` INT NULL,
@@ -25,13 +24,13 @@ CREATE TABLE IF NOT EXISTS pessoas ( -- CRIA A TABELA PESSOAS
   DESC PESSOAS;
   
   ALTER TABLE PESSOAS
-  ADD COLUMN TESTE VARCHAR(20);
+  ADD COLUMN TESTE VARCHAR(20); -- adiciona coluna teste
   
   ALTER TABLE PESSOAS
-  ADD TESTE VARCHAR(20) FIRST;
+  ADD TESTE VARCHAR(20) FIRST; -- coloca a coluna teste primeiro 
   
   ALTER TABLE PESSOAS
-  DROP COLUMN TESTE;
+  DROP COLUMN TESTE; -- tira a coluna teste
   
   drop table pessoas;
   
@@ -98,4 +97,4 @@ ALTER TABLE PESSOAS
 RENAME TO INDIVIDUOS;
 
 UPDATE PESSOAS
-SET NASC='Peru' where IdPessoas = '5';
+SET NASC='Peru' where IdPessoas = '5'; 
