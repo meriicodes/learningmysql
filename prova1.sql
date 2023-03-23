@@ -13,7 +13,7 @@
 
 -- 04. CONSTRUA A TABELA ABAIXO NO BANCO PROVA
 
-CREATE TABLE IF NOT EXISTS `prova`.`CADASTRO` (
+CREATE TABLE IF NOT EXISTS /*`prova`.`CADASTRO` (
   NOME_CLIENTE VARCHAR(45),
   NASCIMENTO_CLIENTE DATE, 
   NACIONALIDADE_CLIENTE VARCHAR(45),
@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `prova`.`CADASTRO` (
   CONTATO_CLIENTE VARCHAR(20),
   CPF_CLIENTE INT,
   CIDADE_CLIENTE VARCHAR(25)
-  ) ENGINE = InnoDB;
+  ) ENGINE = InnoDB; */
   
   -- minha resposta --
   /* use prova;
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `prova`.`CADASTRO` (
   
 -- 05. RECONSTRUIR A TABELA ACIMA REDEFININDO OS CAMPOS COM MELHOR ESTRUTURA E INSERINDO COMENTÁRIO LINHA A LINHA
 -- minha resposta --
-CREATE TABLE IF NOT EXISTS `prova`.`CADASTRO` ( -- cria uma tabela se não existir a tabela cadastro
+/*CREATE TABLE IF NOT EXISTS `prova`.`CADASTRO` ( -- cria uma tabela se não existir a tabela cadastro
   NOME VARCHAR(45), -- nome do aluno com até 45 caracteres com o dado do tipo varchar
   NASCIMENTO DATE, -- data de nascimento do aluno
   NACIONALIDADE VARCHAR(45), -- nacionalidade do aluno com max de 45 caracteres
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `prova`.`CADASTRO` ( -- cria uma tabela se não exist
   CONTATO VARCHAR(10), -- o telefone do aluno com no maximo 10 caracteres
   CPF INT, -- cpf do aluno
   CIDADE VARCHAR(25) -- a cidade do cliente
-  ) ENGINE = InnoDB;
+  ) ENGINE = InnoDB;*/
 
 -- 06. CRIAR UM CAMPO CHAVE NA TABELA DA QUESTÃO 04
 -- minha resposta --
@@ -94,6 +94,9 @@ VALUES ('Eloisa Lopes','2006-11-06','Italiana','f','905496987','3479', '77868502
 
 INSERT INTO CADASTRO (`Nome`,`Nascimento`,`nacionalidade`,`sexo`,`contato`,`cpf`, `id`, `cidade`)
 VALUES ('Carlos Gabriel','2006-01-05','Alemão','m','708096922','90976', '908474654', 'Berlim');
+
+
+-- o campo cpf está só 4 dígitos porque se adicionar muitos, ele buga. 
 
 select * from prova.CADASTRO; 
 
